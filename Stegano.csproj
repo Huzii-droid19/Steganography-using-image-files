@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CAA47942-0DED-4765-ABF9-EB11E5EAB155}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Stegano</RootNamespace>
+    <AssemblyName>Stegano</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.5.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Choice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Choice.Designer.cs">
+      <DependentUpon>Choice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="DecryptImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DecryptImage.Designer.cs">
+      <DependentUpon>DecryptImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DecryptKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DecryptKey.Designer.cs">
+      <DependentUpon>DecryptKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DecryptText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DecryptText.Designer.cs">
+      <DependentUpon>DecryptText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptFinal2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptFinal2.Designer.cs">
+      <DependentUpon>EncryptFinal2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptImage.Designer.cs">
+      <DependentUpon>EncryptImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptKey.Designer.cs">
+      <DependentUpon>EncryptKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncryptText.Designer.cs">
+      <DependentUpon>EncryptText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="File.cs" />
+    <Compile Include="FinalEncrypt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalEncrypt.Designer.cs">
+      <DependentUpon>FinalEncrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IFile.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Choice.resx">
+      <DependentUpon>Choice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DecryptImage.resx">
+      <DependentUpon>DecryptImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DecryptKey.resx">
+      <DependentUpon>DecryptKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DecryptText.resx">
+      <DependentUpon>DecryptText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptFinal2.resx">
+      <DependentUpon>EncryptFinal2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptImage.resx">
+      <DependentUpon>EncryptImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptKey.resx">
+      <DependentUpon>EncryptKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncryptText.resx">
+      <DependentUpon>EncryptText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalEncrypt.resx">
+      <DependentUpon>FinalEncrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
